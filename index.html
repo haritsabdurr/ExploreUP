@@ -25,6 +25,7 @@
 
     <!-- Script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
     <title>ExploreUP | Homepage</title>
@@ -61,13 +62,13 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
+              <a class="nav-link" href="#about">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">Testimonials</a>
+              <a class="nav-link" href="#testimonials">Testimonials</a>
             </li>
             <li class="nav-item">
               <a class="nav-link btn btn-danger log-in-btn">Log In</a>
@@ -79,8 +80,8 @@
     <!-- End Navbar -->
 
     <!-- Hero -->
-    <div class="container custom-hero reveal" id="home">
-      <div class="row row-hero d-flex align-content-center">
+    <div class="container custom-hero" id="home">
+      <div class="row row-hero d-flex align-content-center reveal">
         <div class="col-12 col-lg-6 hero-atas">
           <div class="txt-hero">
             <h2>See More, Feel More ...</h2>
@@ -101,10 +102,10 @@
     <!-- End Hero -->
 
     <!-- Services -->
-    <div class="section" id="services">
-      <div class="container custom-services reveal">
-        <h3>Our Advantages</h3>
-        <div class="row svc-row">
+    <section id="services">
+      <div class="container custom-services">
+        <h3 class="reveal">Our Advantages</h3>
+        <div class="row svc-row reveal">
           <div class="col-12 col-lg-4">
             <div class="card">
               <h5>Services #1</h5>
@@ -143,11 +144,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- End Services -->
 
     <!-- About -->
-    <div class="section" id="about">
+    <section id="about">
       <div class="container custom-about reveal">
         <div class="row abt-row">
           <div class="col-12 col-lg-6 abt-gambar">
@@ -175,12 +176,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <!-- End About -->
 
     <!-- Testimonials -->
     <section id="testimonials">
-      <div class="container custom-testi">
+      <div class="container custom-testi reveal">
         <div class="row justify-content-center">
           <h3>What They Say</h3>
         </div>
@@ -283,7 +284,7 @@
     <!-- End Testimonials -->
 
     <!-- App Download -->
-    <section id="app">
+    <section class="reveal" id="app">
       <div class="container custom-app">
         <div class="app-banner">
           <div class="app-txt">
@@ -306,7 +307,7 @@
     <!-- End App Download -->
 
     <!-- Footer -->
-    <section id="footer">
+    <section class="reveal" id="footer">
       <div class="container custom-footer">
         <div class="row foot-row">
           <div class="col-12 col-lg-4 footer-abt">
@@ -381,11 +382,20 @@
     <script src="owl.carousel.min.js"></script>
 
     <script>
-      var scroll = new SmoothScroll("section", {
-        speed: 1000,
+      ScrollReveal({
+        reset: true,
+        distance: "20px",
+        duration: 2000,
+      });
+
+      ScrollReveal().reveal(".reveal");
+
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 2000,
         speedAsDuration: true,
       });
     </script>
+
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
