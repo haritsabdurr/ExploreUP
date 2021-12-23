@@ -30,7 +30,7 @@
 
     <title>ExploreUP | Homepage</title>
   </head>
-  <body>
+  <body id="body">
     <!-- Navbar -->
     <nav
       class="
@@ -39,6 +39,7 @@
         custom-nav
         my-4
       "
+      id="nav"
     >
       <div class="container">
         <a class="navbar-brand" href="#">Explore<span id="up-logo">UP</span></a>
@@ -367,6 +368,14 @@
     </section>
     <!-- End Footer -->
 
+    <!-- Scroll to Top -->
+    <section id="scroll-top">
+      <div class="scroll-to-top">
+        <a href="#body"> <i class="fa fa-arrow-up"></i></a>
+      </div>
+    </section>
+    <!-- End Scroll to Top -->
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
@@ -384,14 +393,16 @@
     <script>
       ScrollReveal({
         reset: true,
-        distance: "20px",
+        distance: "40px",
         duration: 2000,
       });
 
       ScrollReveal().reveal(".reveal");
+    </script>
 
+    <script>
       var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 2000,
+        speed: 40,
         speedAsDuration: true,
       });
     </script>
